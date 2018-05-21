@@ -41,16 +41,6 @@ ENV APP_DEBUG=true
 ENV APP_LOG_LEVEL=debug
 ENV APP_URL=http://localhost:8000
 
-# Setup Database Environment
-ENV DB_CONNECTION=oracle
-ENV DB_SID="SID"
-ENV DB_HOST="127.0.0.1"
-ENV DB_DATABASE=testing
-ENV DB_USERNAME=oracle
-ENV DB_PORT=1521
-ENV DB_PASSWORD=
-ENV DB_SERVER_VERSION=12c
-
 # Working Directory
 WORKDIR /var/www/html
 
