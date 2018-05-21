@@ -11,7 +11,9 @@ RUN apt-get update && apt-get install -y mysql-client \
 	git \
 	zlib1g-dev \
 	libgmp3-dev \
-	&& docker-php-ext-install mbstring json zip gmp bcmath mysqli pdo pdo_mysql
+	&& docker-php-ext-install mbstring json zip gmp bcmath mysqli pdo pdo_mysql \
+	&& pecl install xdebug \
+	&& docker-php-ext-enable xdebug 
 
 # Install Composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
